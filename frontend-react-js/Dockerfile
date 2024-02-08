@@ -17,10 +17,10 @@ COPY . .
 RUN npm run build
 
 # Set environment variables from .env file
-ENV BACKEND_URL="http://127.0.0.1:4567"
-ENV PORT=3001
+ENV REACT_APP_BACKEND_URL="http://localhost:4567"
+ENV PORT=3000
 
-# Make flask port 3001 available to the world outside this container
+# Make flask port 3000 available to the world outside this container
 EXPOSE ${PORT}
 
 # Specify the command to run your React app
