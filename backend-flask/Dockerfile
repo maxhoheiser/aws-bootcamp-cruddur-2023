@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Set environment variables from .env file
 ENV FLASK_ENV=development
-ENV FRONTEND_URL="http://127.0.0.1:3001"
-ENV BACKEND_URL="http://127.0.0.1:4567"
+ENV FRONTEND_URL="http://localhost:3000"
+ENV BACKEND_URL="http://localhost:4567"
 ENV PORT=4567
 
 # Make flask port 4567 available to the world outside this container
