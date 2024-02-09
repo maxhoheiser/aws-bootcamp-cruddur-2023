@@ -6,13 +6,13 @@ authors = ["Max"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.12"
 Flask = "^3.0.2"
 Flask-Cors = "^4.0.0"
 
 
 [tool.poetry.group.dev.dependencies]
-python = "^3.10"
+python = "^3.12"
 Flask = "^3.0.2"
 Flask-Cors = "^4.0.0"
 mypy = "^1.8.0"
@@ -20,6 +20,7 @@ pytest = "^8.0.0"
 pre-commit = "^3.6.0"
 flake8 = "^7.0.0"
 black = "^24.1.1"
+poetry = "^1.7.1"
 
 [build-system]
 requires = ["poetry-core"]
