@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "backend-flask"
+version = "0.1.0"
+description = ""
+authors = ["Max"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^3.0.2"
+Flask-Cors = "^4.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+python = "^3.10"
+Flask = "^3.0.2"
+Flask-Cors = "^4.0.0"
+mypy = "^1.8.0"
+pytest = "^8.0.0"
+pre-commit = "^3.6.0"
+flake8 = "^7.0.0"
+black = "^24.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
