@@ -13,6 +13,13 @@ services:
       FRONTEND_URL: "http://localhost:3000"
       BACKEND_URL: "http://localhost:4567"
       PORT: 4567
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4567/api/activities/home"]
+      interval: 1m
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+  
   frontend:
     build: ./frontend-react-js
     image: ${AWS_ECR_URL}:cruddr-frontend
@@ -23,6 +30,14 @@ services:
     environment:
       REACT_APP_BACKEND_URL: "http://localhost:4567"
       PORT: 3000
+    depends_on:
+      - backend
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 1m
+      timeout: 5s
+      retries: 3
+      start_period: 10s
 
 networks: 
   internal-network:
