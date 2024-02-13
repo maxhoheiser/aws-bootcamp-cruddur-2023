@@ -3,6 +3,7 @@ version: "3.8"
 services:
   backend:
     build: ./backend-flask
+    image: ${AWS_ECR_URL}:cruddr-backend
     ports:
       - "4567:4567"
     volumes:
@@ -14,6 +15,7 @@ services:
       PORT: 4567
   frontend:
     build: ./frontend-react-js
+    image: ${AWS_ECR_URL}:cruddr-frontend
     ports:
       - "3000:3000"
     volumes:
