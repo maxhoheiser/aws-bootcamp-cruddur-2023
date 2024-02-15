@@ -9,6 +9,9 @@ readme = "README.md"
 python = "^3.12"
 Flask = "^3.0.2"
 Flask-Cors = "^4.0.0"
+honeycomb-opentelemetry = "^0.3.0a0"
+opentelemetry-instrumentation-flask = "^0.43b0"
+python-dotenv = "^1.0.1"
 
 
 [tool.poetry.group.dev.dependencies]
