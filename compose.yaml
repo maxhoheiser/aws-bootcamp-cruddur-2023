@@ -13,6 +13,9 @@ services:
       FRONTEND_URL: "http://localhost:3000"
       BACKEND_URL: "http://localhost:4567"
       PORT: 4567
+      OTEL_SERVICE_NAME: "cruddr-backend" 
+      OTEL_EXPORTER_OTLP_ENDPOINT: "https://api.honeycomb.io"
+      OTEL_EXPORTER_OTLP_HEADERS: "x-honeycomb-team=${HONEYCOMB_API_KEY}"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:4567/api/activities/home"]
       interval: 1m
@@ -30,6 +33,9 @@ services:
     environment:
       REACT_APP_BACKEND_URL: "http://localhost:4567"
       PORT: 3000
+      OTEL_SERVICE_NAME: "cruddr-frontend"
+      OTEL_EXPORTER_OTLP_ENDPOINT: "https://api.honeycomb.io"
+      OTEL_EXPORTER_OTLP_HEADERS: "x-honeycomb-team=${HONEYCOMB_API_KEY}"
     depends_on:
       - backend
     healthcheck:
