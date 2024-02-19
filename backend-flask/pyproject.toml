@@ -12,6 +12,10 @@ Flask-Cors = "^4.0.0"
 honeycomb-opentelemetry = "^0.3.0a0"
 opentelemetry-instrumentation-flask = "^0.43b0"
 python-dotenv = "^1.0.1"
+opentelemetry-api = "^1.22.0"
+opentelemetry-sdk = "^1.22.0"
+opentelemetry-exporter-otlp-proto-http = "^1.22.0"
+opentelemetry-instrumentation-requests = "^0.43b0"
 
 
 [tool.poetry.group.dev.dependencies]

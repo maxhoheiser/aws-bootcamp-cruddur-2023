@@ -1205,6 +1205,27 @@ instruments = ["flask (>=1.0,<3.0)", "werkzeug (<3.0.0)"]
 test = ["markupsafe (==2.1.2)", "opentelemetry-instrumentation-flask[instruments]", "opentelemetry-test-utils (==0.43b0)"]
 
 [[package]]
+name = "opentelemetry-instrumentation-requests"
+version = "0.43b0"
+description = "OpenTelemetry requests instrumentation"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "opentelemetry_instrumentation_requests-0.43b0-py3-none-any.whl", hash = "sha256:cd9d0862ab8c8892a207dd828134f23c6a5014756f0f055120412aa00be7732d"},
+    {file = "opentelemetry_instrumentation_requests-0.43b0.tar.gz", hash = "sha256:fd92c278d463dbad39cdc42e4f5871de8f66560cf9b40191b554a293aa6faf49"},
+]
+
+[package.dependencies]
+opentelemetry-api = ">=1.12,<2.0"
+opentelemetry-instrumentation = "0.43b0"
+opentelemetry-semantic-conventions = "0.43b0"
+opentelemetry-util-http = "0.43b0"
+
+[package.extras]
+instruments = ["requests (>=2.0,<3.0)"]
+test = ["httpretty (>=1.0,<2.0)", "opentelemetry-instrumentation-requests[instruments]", "opentelemetry-test-utils (==0.43b0)"]
+
+[[package]]
 name = "opentelemetry-instrumentation-wsgi"
 version = "0.43b0"
 description = "WSGI Middleware for OpenTelemetry"
@@ -2062,4 +2083,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "cb67d4cc14a7297ec0e68d6ab84359e4c14d80ea2637d3cc3d6e2c337bfc073b"
+content-hash = "1efd619d30340caa6d815dd1314fefe763f0a23a0662ac2bd6eac95491a96a43"

@@ -16,6 +16,7 @@ services:
       OTEL_SERVICE_NAME: "cruddr-backend" 
       OTEL_EXPORTER_OTLP_ENDPOINT: "https://api.honeycomb.io"
       OTEL_EXPORTER_OTLP_HEADERS: "x-honeycomb-team=${HONEYCOMB_API_KEY}"
+      HONEYCOMB_API_ENDPOINT: "api.eu1.honeycomb.io:443"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:4567/api/activities/home"]
       interval: 1m
