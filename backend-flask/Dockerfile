@@ -21,4 +21,4 @@ ENV PORT=4567
 EXPOSE ${PORT}
 
 # Run app.py when the container launches
-CMD ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port=4567"]
+CMD ["python", "-m", "flask", "--debug", "run", "--host=0.0.0.0", "--port=4567"]
